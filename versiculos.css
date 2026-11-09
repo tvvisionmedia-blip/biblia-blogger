@@ -1,0 +1,56 @@
+.ref-biblica {
+	color: #7a4b12;
+	border-bottom: 1px dashed currentColor;
+	cursor: pointer;
+}
+.ref-biblica:hover,
+.ref-biblica:focus {
+	color: #a8661a;
+	outline: none;
+}
+
+#popup-versiculo {
+	position: absolute;
+	z-index: 99999;
+	max-width: 320px;
+	padding: 14px 16px 12px;
+	background: #fffdf7;
+	color: #2b2b2b;
+	border: 1px solid #e3d6bd;
+	border-radius: 10px;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, .15);
+	font: 15px/1.5 Georgia, serif;
+	text-align: left;
+	opacity: 0;
+	transform: translateY(4px);
+	transition: opacity .15s, transform .15s;
+	pointer-events: none;
+}
+#popup-versiculo.visible {
+	opacity: 1;
+	transform: none;
+	pointer-events: auto;
+}
+#popup-versiculo .pv-ref {
+	display: block;
+	margin-bottom: 6px;
+	font: bold 13px/1.2 system-ui, sans-serif;
+	color: #7a4b12;
+	letter-spacing: .02em;
+}
+#popup-versiculo .pv-version {
+	display: block;
+	margin-top: 8px;
+	font: 11px system-ui, sans-serif;
+	color: #888;
+}
+#popup-versiculo .pv-texto {
+	display: block;
+	max-height: 50vh;
+	overflow-y: auto;
+}
+#popup-versiculo .pv-texto sup {
+	font: bold 10px system-ui, sans-serif;
+	color: #a8661a;
+	vertical-align: super;
+}
